@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AgregarTaxistaComponent } from './modulo_taxistas/agregar-taxista/agregar-taxista.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,
+    AgregarTaxistaComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
