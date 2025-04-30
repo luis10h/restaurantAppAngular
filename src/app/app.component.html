@@ -1,9 +1,15 @@
 
-    <div>
-      <app-home></app-home>
-    </div>
+<mat-card appearance="outlined">
+  <mat-card-content><nav>
+    <!-- <mat-card><a routerLink="/">Inicio</a></mat-card>
+    <mat-card><a routerLink="/dashboard">Dashboard</a></mat-card>
+    <mat-card><a routerLink="agregar">Agregar</a></mat-card> -->
+
+    <mat-card><a mat-flat-button  routerLink="agregar" target="_blank">Inicio</a></mat-card>
+    <mat-card><a mat-flat-button  routerLink="agregar" target="_blank">Dashboard</a></mat-card>
+    <mat-card><a mat-flat-button  routerLink="agregar" target="_blank">Agregar</a></mat-card>
+  </nav></mat-card-content>
+</mat-card>
 
 
-<router-outlet />
-
-<app-agregar-taxista></app-agregar-taxista>
+<router-outlet></router-outlet>
