@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.sidenav-container {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.sidenav {
+  width: 250px;
+  transition: transform 0.3s ease;
+  position: fixed;
+}
+
+.mat-toolbar {
+  background-color: rgba(255, 72, 0, 0.822);
+  color: #ffff;
+}
+
+.menu-texto1{
+  background-color: transparent;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.usuarios {
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  margin-left: 40px;
+}
+.botones {
+  margin-top: 10px;
+  /* row-gap: 10px; */
+}
+.menu-icono {
+  margin-left: 130px;
+}
+.menu-iconoD {
+  margin-left: 30px;
+  margin-top: 10px;
+  position: absolute;
+}
+/* .menu-principal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+} */
+
+.menu-principal > .logo-usuario {
+  display: flex;
+  align-items: center;
+  padding: 0px 32px;
+  justify-content: space-between;
+  background: rgba(255, 72, 0, 0.822);
+  height: 64px;
+}
+
+.logo-usuario {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  /* gap: 5px; */
+}
+
+.perfil mat-icon-button {
+  margin-right: 10px;
+}
+.mat-mdc-icon-button {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+.mat-mdc-icon-button img,
+.mat-mdc-icon-button svg {
+  height: 36px;
+  min-width: 60px;
+  font-size: 48px;
+  width: 36px;
+
+}
+
+.menu-principal > nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  padding: 8px 16px;
+}
+
+.navbar-principal {
+  height: 56px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.contenedor-principal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 600px) {
+  .menu-principal > nav > ul {
+    gap: 5px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu-principal > nav > ul {
+    gap: 5px;
+    width: 100%;
+  }
+}
+.sidenav {
+  background-color: aliceblue;
+  border-radius: 0%;
+  border-color: black;
+  border: 1px;
+  transition: transform 0.3s ease;
+}
+
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.usuarios {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+.usuarios.expanded {
+  max-height: 100px;
+}
+.administracion {
+  margin-left: 40px;
+}
+.administracion {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+.administracion.expanded {
+  max-height: 200px;
+}
+
