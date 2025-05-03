@@ -1,206 +1,271 @@
-/* Styles for agregar-taxista.component.css */
+/* Estilos base (desktop-first) */
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0); */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
 h1 {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+/* form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+} */
 
 label {
-    font-size: 14px;
-    color: #555;
+  font-size: 14px;
+  color: #555;
 }
 
-input, button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
-/* From Uiverse.io by zanina-yassine */ 
+
 .modal {
-    width: fit-content;
-    height: fit-content;
-    background: #FFFFFF;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 26px;
-    max-width: 700px;
-  }
+  width: 700px;
+  max-width: 700px;
+  background: #ffffff;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+    0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+    0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 26px;
+  display: flex;
+  /* gap: 20px; */
+  flex-wrap: wrap;
   
+}
+
+.item:nth-child(1),
+.item:nth-child(2),
+.item:nth-child(4) {
+  flex-grow: 1;
+}
+
+.item:nth-child(3) {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+/* justify-content: center; */
+  margin-left: 10px;
+}
+
+.payment--options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.payment--options button {
+  height: 55px;
+  background: #f2f2f2;
+  border-radius: 11px;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+.payment--options button svg {
+  height: 18px;
+}
+
+.payment--options button:last-child svg {
+  height: 22px;
+}
+
+.separator {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  color: #8b8e98;
+  margin: 0 10px;
+}
+
+.separator > p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.separator .line {
+  height: 1px;
+  background-color: #e8e8e8;
+}
+
+.credit-card-info--form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input_container,
+.input_class {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.split input {
+  width: 100%;
+}
+
+.input_label {
+  font-size: 20px;
+  color: #8b8e98;
+  font-weight: 600;
+}
+
+.input_field {
+  height: 40px;
+  padding-left: 16px;
+  border-radius: 9px;
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+  box-shadow: 0px 0px 0px 2px #242424;
+  background-color: transparent;
+}
+
+.purchase--btn {
+  height: 55px;
+  background: linear-gradient(180deg, #363636 0%, #1b1b1b 50%, #000000 100%);
+  border-radius: 11px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.purchase--btn:hover {
+  box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #0000003a;
+}
+
+/* Reset input number styles */
+.input_field::-webkit-outer-spin-button,
+.input_field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_field[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.titulo_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ------------------- RESPONSIVE STYLES ------------------- */
+
+@media (max-width: 768px) {
+  .container{
+    margin: 20px;
+  }
+  .container,
+  .modal,
   .form {
-    display: flex;
+    padding: 0px;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    width: 600px;
+    max-width: 100%;
   }
-  
-  .payment--options {
-    width: calc(100% - 40px);
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  .payment--options button {
-    height: 55px;
-    background: #F2F2F2;
-    border-radius: 11px;
-    padding: 0;
-    border: 0;
-    outline: none;
-  }
-  
-  .payment--options button svg {
-    height: 18px;
-  }
-  
-  .payment--options button:last-child svg {
-    height: 22px;
-  }
-  
-  .separator {
-    width: calc(100% - 20px);
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 10px;
-    color: #8B8E98;
-    margin: 0 10px;
-  }
-  
-  .separator > p {
-    word-break: keep-all;
-    display: block;
-    text-align: center;
-    font-weight: 600;
-    font-size: 11px;
-    margin: auto;
-  }
-  
-  .separator .line {
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    border: 0;
-    background-color: #e8e8e8;
-    margin: auto;
-  }
-  
-  .credit-card-info--form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .input_container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .input_class {
-    display: flex;
-    flex-direction: column;
-    height: 80px;
-    gap: 5px;
-  }
+
   .split {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    gap: 15px;
+    grid-template-columns: 1fr;
   }
-  
-  .split input {
-    width: 100%;
+
+  .payment--options {
+    grid-template-columns: 1fr;
   }
-  
-  .input_label {
+
+  .separator {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  h1 {
     font-size: 20px;
-    color: #8B8E98;
-    font-weight: 600;
   }
-  
-  .input_field {
-    width: auto;
-    height: 40px;
-    padding: 0 0 0 16px;
-    border-radius: 9px;
-    outline: none;
-    background-color: #F2F2F2;
-    border: 1px solid #e5e5e500;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+
+  .input_label {
+    font-size: 16px;
   }
-  
-  .input_field:focus {
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 0px 2px #242424;
-    background-color: transparent;
-  }
-  
+
   .purchase--btn {
-    height: 55px;
-    background: #F2F2F2;
-    border-radius: 11px;
-    border: 0;
-    outline: none;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 700;
-    background: linear-gradient(180deg, #363636 0%, #1B1B1B 50%, #000000 100%);
-    box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+    font-size: 14px;
   }
-  
-  .purchase--btn:hover {
-    box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 10px;
   }
-  
-  /* Reset input number styles */
-  .input_field::-webkit-outer-spin-button,
-  .input_field::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 8px;
   }
-  
-  .input_field[type=number] {
-    -moz-appearance: textfield;
+
+  .input_label {
+    font-size: 14px;
   }
-  .titulo_form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .form {
+    /* padding: 10px; */
   }
+
+  .modal {
+    border-radius: 12px;
+  }
+}
