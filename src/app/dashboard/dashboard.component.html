@@ -36,7 +36,7 @@
       </button> -->
       <!-- <div class="administracion" [ngClass]="{ expanded: !administracionVisible }"> -->
       <button mat-menu-item (click)="showView('add-comisiones')">
-        Inventario
+        Taxista referidor
         <mat-icon>
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#44474e">
             <path
@@ -129,7 +129,7 @@
       </div>
 
       <div class="contenedor-principal">
-        <app-agregar-comisiones *ngIf="currentView === 'add-comisiones'"></app-agregar-comisiones>
+        <app-consultas *ngIf="currentView === 'add-comisiones'"></app-consultas>
         <app-agregar-taxista *ngIf="currentView === 'add-taxista'"></app-agregar-taxista>
       </div>
 

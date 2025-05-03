@@ -1,50 +1,90 @@
-<div class="container">
-    <mat-card class="modal quitarFondoCard" appearance="outlined">
-        <mat-card-header class="titulo_form">
-            <h2>Agregar Reserva ByTax</h2>
-            <button mat-menu-item (click)="showView('add-taxista')">
-                Usuarios
-                <mat-icon>group</mat-icon>
-              </button>
-              <h1>{{currentView}}</h1>
-        </mat-card-header>
-        <mat-card-content>
-           
-            <form class="form" *ngIf="currentView != 'add-taxista'">
-                <div class="split">
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Nombre Completo:</label>
-                        <mat-form-field class="input_class">
-                            <input matInput placeholder="Ex. Pizza">
-                        </mat-form-field>
-                    </div>
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Teléfono:</label>
-                        <mat-form-field class="input_class">
-                            <input matInput placeholder="Ex. Pizza">
-                        </mat-form-field>
-                    </div>
-                </div>
-                <div class="split">
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Cédula:</label>
-                        <mat-form-field class="input_class">
-                            <input matInput placeholder="Ex. Pizza">
-                        </mat-form-field>
-                    </div>
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Numero de placa</label>
-                        <mat-form-field class="input_class">
-                            <input matInput placeholder="Ex. Pizza">
-                        </mat-form-field>
-                    </div>
-                </div>
+<div class="formularioProveedores" style="margin: 10px;">
+    <form>
+        <mat-card-title class="titulo">
+            {{ modoFormulario === 'agregar' ? 'Agregar Reserva ByTax' : 'Editar Reserva ByTax' }}
+            <!-- Botón de cerrar con icono -->
+            <button mat-icon-button color="warn" (click)="cerrarFormulario()" class="close-btn">
+                <mat-icon>close</mat-icon> <!-- Icono de "X" -->
+            </button>
+        </mat-card-title>
+        <div class="input-container">
+            <div class="input-item">
+                <mat-form-field>
+                    <mat-label>Nombre del taxista</mat-label>
+                    <input matInput placeholder="Ej. Nombre de la sede">
+                    <mat-error> Este campo es requerido.
+                    </mat-error>
+                    <mat-icon matSuffix>assignment</mat-icon>
+                </mat-form-field>
+            </div>
+
+            <div class="input-item">
+                <mat-form-field>
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput placeholder="Ej. 30000000">
+                    <mat-icon matSuffix>123</mat-icon>
+                    <mat-error> Este campo es requerido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-item">
+                <mat-form-field>
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput placeholder="Ej. 30000000">
+                    <mat-icon matSuffix>123</mat-icon>
+                    <mat-error> Este campo es requerido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-item">
+                <mat-form-field>
+                    <mat-label>Placa</mat-label>
+                    <input matInput placeholder="Ej. Calle 21A LT2">
+                    <mat-icon matSuffix>assistant_direction</mat-icon>
+                    <mat-error> Este campo es requerido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-item">
+                <mat-form-field>
+                    <mat-label>Referidos</mat-label>
+                    <input #number_clientes matInput type="number">
+                    <mat-hint align="start"><strong>Numero de clientes.</strong> </mat-hint>
+                    <mat-icon matSuffix>manage_accounts</mat-icon>
+                    <mat-error> Este campo es requerido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-item">
+                <mat-form-field>
+                    <mat-label>Comisión</mat-label>
+                    <input matInput [value]="'$ ' + calcularComision(number_clientes.value) + ' MIL PESOS'" disabled>
+
+                    <mat-hint align="start"><strong>Total a pagar.</strong> </mat-hint>
+                    <mat-icon matSuffix>123</mat-icon>
+                    <mat-error> Este campo es requerido.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-item pagado">
+                <!-- <mat-form-field> -->
+                <mat-label>Pagado?</mat-label>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Si</mat-radio-button>
+                    <mat-radio-button value="2">No</mat-radio-button>
+                </mat-radio-group>
+                <!-- </mat-form-field> -->
+
+            </div>
+            <!-- {{comision.value}}
+        {{number_clientes.value}} -->
 
 
-                <button class="purchase--btn">Agregar</button>
-            </form>
-        </mat-card-content>
 
-
-    </mat-card>
+        </div>
+        <mat-card-actions align="end">
+            <button class="purchase--btn" mat-raised-button color="primary">Guardar
+                Sede</button>
+        </mat-card-actions>
+    </form>
 </div>

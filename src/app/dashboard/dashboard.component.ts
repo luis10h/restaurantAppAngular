@@ -36,6 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 // import { AdminUsuarioComponent } from '../usuarios/admin-usuario/admin-usuario.component';
 // import { MatBadgeModule } from '@angular/material/badge';
 import Swal from 'sweetalert2';
+import { ConsultasComponent } from "../modulo_comisiones/consultas/consultas.component";
 // import { ButtonVisibilityService } from '../button-visibility.service'; // Importa el servicio
 
 @Component({
@@ -50,13 +51,9 @@ import Swal from 'sweetalert2';
     AsyncPipe,
     MatMenuModule,
     RouterModule,
- 
     MatTableModule,
     MatPaginatorModule,
-
-    MatPaginatorModule,
-  
-  ],
+    MatPaginatorModule, ConsultasComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
