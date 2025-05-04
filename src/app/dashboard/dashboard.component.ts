@@ -37,6 +37,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 // import { MatBadgeModule } from '@angular/material/badge';
 import Swal from 'sweetalert2';
 // import { ButtonVisibilityService } from '../button-visibility.service'; // Importa el servicio
+import { AgregarReservaComponent } from '../agregar-reserva/agregar-reserva.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -50,6 +51,7 @@ import Swal from 'sweetalert2';
     AsyncPipe,
     MatMenuModule,
     RouterModule,
+    AgregarReservaComponent,
  
     MatTableModule,
     MatPaginatorModule,

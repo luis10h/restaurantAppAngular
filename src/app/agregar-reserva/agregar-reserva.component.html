@@ -1,0 +1,63 @@
+
+
+    <div class="container">
+        <mat-card class="modal quitarFondoCard" appearance="outlined">
+            <mat-card-header class="titulo_form">
+                <h2>Agregar Reserva</h2>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="form">
+                    <div class="split">
+                        <div class="input_container">
+                            <label for="password_field" class="input_label">Nombre Completo:</label>
+                            <mat-form-field class="input_class">
+                                <input matInput placeholder="Ex. Pizza">
+                            </mat-form-field>
+                        </div>
+                        <div class="input_container">
+                            <label for="password_field" class="input_label">Teléfono:</label>
+                            <mat-form-field class="input_class">
+                                <input matInput placeholder="Ex. Pizza">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="split">
+                        <div class="input_container">
+                            <label for="password_field" class="input_label">Cédula:</label>
+                            <mat-form-field class="input_class">
+                                <input matInput placeholder="Ex. Pizza">
+                            </mat-form-field>
+                        </div>
+                        <!-- <div class="input_container">
+                            <mat-form-field>
+                                <mat-label>Meeting date</mat-label>
+                                <input matInput [matDatepicker]="datepicker" [(ngModel)]="value">
+                                <mat-datepicker #datepicker/>
+                                <mat-datepicker-toggle [for]="datepicker" matSuffix/>
+                              </mat-form-field>
+                              
+                              <mat-form-field>
+                                <mat-label>Meeting time</mat-label>
+                                <input matInput
+                                  [matTimepicker]="timepicker"
+                                  [(ngModel)]="value"
+                                  [ngModelOptions]="{updateOn: 'blur'}">
+                                <mat-timepicker #timepicker/>
+                                <mat-timepicker-toggle [for]="timepicker" matSuffix/>
+                              </mat-form-field>
+                              
+                              <p>Value: {{value}}</p>
+                              
+                        </div> -->
+                    </div>
+    
+    
+                    <button class="purchase--btn">Agregar</button>
+
+
+                </form>
+            </mat-card-content>
+    
+    
+        </mat-card>
+    </div>
