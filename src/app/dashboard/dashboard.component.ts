@@ -38,6 +38,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import Swal from 'sweetalert2';
 import { ConsultasComponent } from "../modulo_comisiones/consultas/consultas.component";
 // import { ButtonVisibilityService } from '../button-visibility.service'; // Importa el servicio
+import { AgregarReservaComponent } from '../agregar-reserva/agregar-reserva.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -51,6 +52,8 @@ import { ConsultasComponent } from "../modulo_comisiones/consultas/consultas.com
     AsyncPipe,
     MatMenuModule,
     RouterModule,
+    AgregarReservaComponent,
+ 
     MatTableModule,
     MatPaginatorModule,
     MatPaginatorModule, ConsultasComponent],

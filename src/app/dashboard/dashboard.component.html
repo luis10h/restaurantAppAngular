@@ -45,6 +45,11 @@
         </mat-icon>
       </button>
 
+      <button mat-menu-item (click)="showView('add-reserva')">
+        Reservas
+        <mat-icon>event</mat-icon>
+      </button>
+
 
 
 
@@ -131,6 +136,7 @@
       <div class="contenedor-principal">
         <app-consultas *ngIf="currentView === 'add-comisiones'"></app-consultas>
         <app-agregar-taxista *ngIf="currentView === 'add-taxista'"></app-agregar-taxista>
+        <app-agregar-reserva *ngIf="currentView === 'add-reserva'"></app-agregar-reserva>
       </div>
 
 
