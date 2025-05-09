@@ -1,0 +1,41 @@
+<mat-card class="modal-container">
+    <mat-card-header>
+      <h2>Crear Reserva</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="nombre">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input matInput [(ngModel)]="apellido">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Cédula</mat-label>
+        <input matInput [(ngModel)]="cedula">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha de Reserva</mat-label>
+        <input matInput [matDatepicker]="datepicker" [(ngModel)]="fechaReserva">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Hora de Reserva</mat-label>
+        <input matInput [matTimepicker]="timepicker" [(ngModel)]="horaReserva">
+        <mat-timepicker-toggle matSuffix [for]="timepicker"></mat-timepicker-toggle>
+        <mat-timepicker #timepicker></mat-timepicker>
+      </mat-form-field>
+  
+      <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+        <button mat-raised-button color="primary" (click)="guardarReserva()">Guardar</button>
+        <button mat-button (click)="dialogRef.close()">Cancelar</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
